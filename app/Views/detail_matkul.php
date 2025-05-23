@@ -42,6 +42,10 @@
     </style>
 </head>
 <body>
+    <?= $this->extend('layout') ?>
+
+    <?= $this->section('content') ?>
+
     <h2><?= $matkul['nama'] ?></h2>
     <table>
         <tr><th>Hari</th><th>Jam</th><th>SKS</th><th>Dosen</th><th>Link Google Classroom</th></tr>
@@ -55,3 +59,5 @@
     </table>
 </body>
 </html>
+
+<?= $this->endSection() ?>

@@ -52,6 +52,9 @@
     </style>
 </head>
 <body>
+    <?= $this->extend('layout') ?>
+
+    <?= $this->section('content') ?>
 
 <h1>Kontak Kami</h1>
 <form method="get" onsubmit="kirimWA(event)">
@@ -92,3 +95,5 @@
 
 </body>
 </html>
+
+<?= $this->endSection() ?>

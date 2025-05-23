@@ -1,0 +1,245 @@
+/* Reset basic */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container agar isi halaman rata tengah dan maksimal lebar */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+nav {
+    width: 100vw; /* Lebar penuh viewport */
+    position: fixed; /* Selalu di atas */
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Padding atas agar konten tidak tertutup navbar fixed */
+body, .container {
+    padding-top: 70px; /* Sesuaikan tinggi navbar plus jarak */
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #34495e;
+    border-bottom: 2px solid #0099ff;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+h2, h3 {
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tabel styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Tombol umum */
+button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(48, 172, 255);
+}
+
+/* Tombol khusus edit (kuning) dan hapus (merah) */
+button.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+button.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #b02a37;
+}
+
+/* Form styling */
+form {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Flash message */
+.flash-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    text-align: center;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Thumbnail gambar sampul di tabel */
+img.sampul-thumb {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: background-color 0.3s ease;
+}
+
+button.delete-btn:hover {
+    background-color: #b02a37 !important;
+}

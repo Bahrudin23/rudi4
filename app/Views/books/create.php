@@ -30,12 +30,31 @@
     </div>
 
     <label for="sampul">Sampul (jpg/png max 2MB)</label>
-    <input type="file" name="sampul" id="sampul">
+    <input type="file" name="sampul" id="sampul" onchange="previewImage();">
     <div style="color:red;">
         <?= isset($validation) ? $validation->getError('sampul') : '' ?>
     </div>
 
+    <img id="sampul-preview" src="#" alt="Preview Gambar" style="max-width: 100px; display: none;">
+
     <button type="submit">Simpan</button>
 </form>
+
+<script>
+    function previewImage() {
+        const file = document.getElementById('sampul').files[0];
+        const reader = new FileReader();
+        
+        reader.onloadend = function () {
+            const preview = document.getElementById('sampul-preview');
+            preview.src = reader.result;
+            preview.style.display = 'block';
+        };
+        
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
 
 <?= $this->endSection() ?>

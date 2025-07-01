@@ -9,6 +9,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    padding-top: 70px;
 }
 
 /* Container agar isi halaman rata tengah dan maksimal lebar */
@@ -22,7 +23,7 @@ body {
 /* Navbar styling */
 nav {
     width: 100vw; /* Lebar penuh viewport */
-    position: fixed; /* Selalu di atas */
+    position: absolute;
     top: 0;
     left: 0;
     background-color: #eee;
@@ -242,4 +243,41 @@ button.delete-btn {
 
 button.delete-btn:hover {
     background-color: #b02a37 !important;
+}
+
+/* Untuk membedakan navbar utama dan pagination */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 5px;
+}
+
+.pagination li a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination li a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination .active a {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
 }

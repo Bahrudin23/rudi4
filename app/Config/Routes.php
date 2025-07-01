@@ -12,6 +12,7 @@ $routes->get('/about','Page::about');
 $routes->get('/faqs', 'Page::faqs');
 $routes->get('/tos','Page::tos');
 $routes->get('/biodata', 'Page::biodata');
+$routes->get('/penulis', 'Penulis::index');
 $routes->setAutoRoute(false);
 
 
@@ -22,3 +23,4 @@ $routes->get('/books/detail/(:segment)', 'Books::detail/$1');
 $routes->post('/books/delete/(:num)', 'Books::delete/$1');
 $routes->get('/books/edit/(:segment)', 'Books::edit/$1');
 $routes->post('/books/update/(:num)', 'Books::update/$1');
+$routes->get('/penulis/detail/(:num)', 'Penulis::detail/$1');

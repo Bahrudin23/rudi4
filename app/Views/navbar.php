@@ -7,6 +7,7 @@ $routes = [
     ['label' => 'Terms of Service', 'url' => base_url('/tos')],
     ['label' => 'Biodata', 'url' => base_url('/biodata')],
     ['label' => 'Books', 'url' => base_url('/books')],
+    ['label' => 'Penulis', 'url' => base_url('/penulis')],
 ];
 
 // Dapatkan URI path tanpa query, misal '/books' atau '/'
